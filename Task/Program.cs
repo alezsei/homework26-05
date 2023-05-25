@@ -31,4 +31,21 @@ void Task21()
 
 }
 
-Task21();
+//Task21();
+
+void Task23()
+{
+    int n = InText("Введите N");
+    if (n > 0)
+    {
+        for(int count = 1; n >= count; count++)
+        {
+            Console.Write( Math.Pow(count,3));
+            Console.Write(" ");
+        }
+    }
+    else Console.WriteLine("Введено отрицательное число, попробуйте снова");
+
+}
+Console.Clear();
+Task23();
