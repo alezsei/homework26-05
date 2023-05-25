@@ -17,7 +17,7 @@ void Task19()
     }
     else Console.WriteLine("Число не пятизначное");
 }
-//Task19();
+
 
 void Task21()
 {
@@ -31,7 +31,7 @@ void Task21()
 
 }
 
-//Task21();
+
 
 void Task23()
 {
@@ -48,4 +48,6 @@ void Task23()
 
 }
 Console.Clear();
+//Task19();
+//Task21();
 Task23();
