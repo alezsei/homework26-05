@@ -17,7 +17,18 @@ void Task19()
     }
     else Console.WriteLine("Число не пятизначное");
 }
-Task19();
+//Task19();
 
+void Task21()
+{
+    int x1 = InText("Введите координату Х первой точки");
+    int y1 = InText("Введите координату Y первой точки");
+    int z1 = InText("Введите координату Z первой точки");
+    int x2 = InText("Введите координату Х второй точки");
+    int y2 = InText("Введите координату Y второй точки");
+    int z2 = InText("Введите координату Z второй точки");
+    Console.WriteLine (Math.Round((Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2) + Math.Pow(z2-z1,2))),2));
 
+}
 
+Task21();
