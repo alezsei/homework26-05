@@ -7,6 +7,7 @@
 void Task19()
 {
     int num1 = InText("Введите пятизначное число");
+    num1 = Math.Abs(num1);
     if (num1 > 9999 && num1 < 100000)
     {
         if ((num1 / 10000 == num1 % 10) && ((num1 % 100 ) / 10 == num1 / 1000 % 10))
@@ -35,19 +36,43 @@ void Task21()
 
 void Task23()
 {
-    int n = InText("Введите N");
-    if (n > 0)
+    int num1 = InText("Введите N");
+    int n = Math.Abs(num1);
+    
+    for(int count = 1; n >= count; count++)
     {
-        for(int count = 1; n >= count; count++)
+        if (num1 > 0)
         {
             Console.Write( Math.Pow(count,3));
             Console.Write(" ");
         }
+        else
+        { 
+            Console.Write( Math.Pow(count,3)*-1);
+            Console.Write(" ");
+        }
     }
-    else Console.WriteLine("Введено отрицательное число, попробуйте снова");
+    if (n==0) Console.Write("Введен 0, попробуйте другое число");
+    
 
 }
 Console.Clear();
-//Task19();
-//Task21();
-Task23();
+Console.Write("1.Задача 19 ");
+Console.Write("2. Задача 21 ");
+Console.WriteLine("3. Задача 23");
+int task = InText("Введите номер задачи: ");
+
+switch (task)
+{
+    case 1: 
+        Task19();
+        break;
+    case 2:
+        Task21();
+        break;
+    case 3:
+        Task23();
+        break;
+}
+
+
